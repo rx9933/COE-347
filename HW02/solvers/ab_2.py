@@ -1,5 +1,4 @@
 import numpy as np
-from euler_explicit import explicit_euler
 
 def adams_bashforth2(f, y0, x_range, h):
 

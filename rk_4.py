@@ -1,7 +1,6 @@
 import numpy as np
 
 def rk4(f, y0, x_range, h):
-
     x0, x_end = x_range
     n_steps = int((x_end - x0) / h) + 1
     x = np.linspace(x0, x_end, n_steps)
