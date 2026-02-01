@@ -1,5 +1,7 @@
 import numpy as np
+from true import *
 
+@count_evals
 def explicit_euler(dy_dx, y0, x_range, h):
     x0, x_end = x_range
     n_steps = int((x_end - x0) / h) + 1
