@@ -1,6 +1,8 @@
 import numpy as np
 from scipy.optimize import fsolve
+from true import *
 
+@count_evals
 def trapezoidal(dy_dx, y0, x_range, h):
 
     x0, x_end = x_range

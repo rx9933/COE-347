@@ -1,5 +1,7 @@
 import numpy as np
+from true import *
 
+@count_evals
 def rk2(f, y0, x_range, h):
 
     x0, x_end = x_range
