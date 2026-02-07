@@ -2,9 +2,7 @@ import numpy as np
 from scipy.integrate import solve_ivp
 from functools import wraps
 
-def exact_solution(f):
-
-    
+def exact_solution(f):    
     sol = solve_ivp(f, [0, 1], [0], method='RK45', 
                     rtol=1e-12, atol=1e-12, dense_output=True)
     return sol
