@@ -11,8 +11,12 @@ def adams_bashforth2(f, y0, x_range, h):
     y[0] = y0
     
     # First step using explicit Euler
-    y[1] = y[0] + h * f(x[0], y[0])
-    
+    # y[1] = y[0] + h * f(x[0], y[0])
+    # first step using RK2 for better accuracy
+    k1 = f(x[0], y[0])
+    k2 = f(x[0] + h, y[0] + h * k1)
+    y[1] = y[0] + h/2 * (k1 + k2)
+      
     # Adams-Bashforth 2-step formula
     for i in range(1, n_steps - 1):
         y[i+1] = y[i] + h/2 * (3*f(x[i], y[i]) - f(x[i-1], y[i-1]))
